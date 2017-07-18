@@ -1,0 +1,717 @@
+/*
+Theme Name: shinbun
+Theme URI: http://196.168.33.10
+Author: yoshimoto
+Author URI: http://196.168.33.10
+Description: The 2013 theme for WordPress takes us back to the blog, featuring a full range of post formats, each displayed beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matching header images, beautiful typography and icons, and a flexible layout that looks great on any device, big or small.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: twentythirteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+a,p,h1 {
+  font-family: "American Typewriter",sans-serif;
+  color: rgb(137,125,87);
+}
+
+h1 {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+
+a:hover {
+  color: rgb(137,125,87);
+}
+
+.main_container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.new_magazines_container {
+  width: 95%;
+  height:500px;
+}
+  @media screen and (max-width: 991px){
+    .new_magazines_container {
+      width: 95%;
+      height:730px;
+    }
+  }
+  @media screen and (max-width: 767px){
+    .new_magazines_container {
+      width: 95%;
+      height:950px;
+    }
+  }
+
+
+/*ナビバー*/
+.navbar {
+  background: white;
+  height: 120px;
+  width: 80%;
+  margin:0 auto;
+}
+
+.top_logo {
+  text-align: center;
+}
+
+.nav_main_category {
+  font-size: 20px;
+  text-align:center;
+  color: rgb(137,125,87);
+  margin-bottom: 2px;
+}
+
+.nav_sub_category {
+  font-size: 10px;
+  text-align:center;
+  color: rgb(137,125,87);
+}
+
+.nav_area {
+  padding-top: 30px;
+}
+
+.top_category {
+  text-align: center;
+}
+
+.top_category img {
+  width: 45px;
+  height: auto;
+}
+
+.top_logo img {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  padding-top: 20px;
+}
+
+/*スライドショー*/
+.top_slide {
+  margin-top: 20px;
+}
+
+.top_slide{
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow:hidden;
+  padding: 0!important;
+}
+
+.top_slide_child img {
+  width: 960px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.top_slide_child {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  height: 400px;
+  padding: 0!important;
+}
+
+.top_slide1{
+  -moz-animation: fadeinout 30s 0s infinite;
+  -webkit-animation: fadeinout 30s 0s infinite;
+  -o-animation: fadeinout 30s 0s infinite;
+  animation: fadeinout 30s 0s infinite;
+}
+
+.top_slide2{
+  -moz-animation: fadeinout 30s 5s infinite;
+  -webkit-animation: fadeinout 30s 5s infinite;
+  -o-animation: fadeinout 30s 5s infinite;
+  animation: fadeinout 30s 5s infinite;
+}
+
+.top_slide3{
+  -moz-animation: fadeinout 30s 10s infinite;
+  -webkit-animation: fadeinout 30s 10s infinite;
+  -o-animation: fadeinout 30s 10s infinite;
+  animation: fadeinout 30s 10s infinite;
+}
+
+.top_slide4{
+  -moz-animation: fadeinout 30s 15s infinite;
+  -webkit-animation: fadeinout 30s 15s infinite;
+  -o-animation: fadeinout 30s 15s infinite;
+  animation: fadeinout 30s 15s infinite;
+}
+
+.top_slide5{
+  -moz-animation: fadeinout 30s 20s infinite;
+  -webkit-animation: fadeinout 30s 20s infinite;
+  -o-animation: fadeinout 30s 20s infinite;
+  animation: fadeinout 30s 20s infinite;
+}
+
+.top_slide6{
+  -moz-animation: fadeinout 30s 25s infinite;
+  -webkit-animation: fadeinout 30s 25s infinite;
+  -o-animation: fadeinout 30s 25s infinite;
+  animation: fadeinout 30s 25s infinite;
+}
+
+@-moz-keyframes fadeinout {
+ 0% { left:0%; opacity:0;}
+ 5% { left:0%;opacity:1; }
+ 20% { left:0%; opacity:1;}
+ 25% { left:0%;opacity:0; }
+ 26% { opacity:0;left:100%; }
+ 99.99% { opacity:0;left:100%; }
+ 100% { opacity:0;left:0%; }
+}
+
+@-webkit-keyframes fadeinout {
+ 0% { left:0%; opacity:0;}
+ 5% { left:0%;opacity:1; }
+ 20% { left:0%; opacity:1;}
+ 25% { left:0%;opacity:0; }
+ 26% { opacity:0;left:100%; }
+ 99.99% { opacity:0;left:100%; }
+ 100% { opacity:0;left:0%; }
+}
+
+@-o-keyframes fadeinout {
+ 0% { left:0%; opacity:0;}
+ 5% { left:0%;opacity:1; }
+ 20% { left:0%; opacity:1;}
+ 25% { left:0%;opacity:0; }
+ 26% { opacity:0;left:100%; }
+ 99.99% { opacity:0;left:100%; }
+ 100% { opacity:0;left:0%; }
+}
+
+@keyframes fadeinout {
+ 0% { left:0%; opacity:0;}
+ 5% { left:0%;opacity:1; }
+ 20% { left:0%; opacity:1;}
+ 25% { left:0%;opacity:0; }
+ 26% { opacity:0;left:100%; }
+ 99.99% { opacity:0;left:100%; }
+ 100% { opacity:0;left:0%; }
+}
+
+.new_informations {
+  padding-top: 20px;
+}
+
+.new_informations p {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.en_title {
+  font-size: 30px;
+}
+
+.new_items {
+  padding-bottom: 10px;
+  padding-left: 0 !important;
+  height:120px;
+}
+
+.new_items a, .new_items p {
+  display: inline-block;
+}
+
+.new_items img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.new_items p {
+  font-size: 12px;
+  vertical-align: top;
+  padding-top: 0;
+  color: rgb(137,125,87);
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+
+.new_items p:first-child {
+  font-size: 10px;
+  vertical-align: top;
+  padding-top: 5px;
+  padding-left: 0;
+  color: rgb(137,125,87);
+  margin-top: 0;
+}
+
+.link_category {
+  position: absolute;
+  top: 8%;
+  right: 3%;
+  color: rgb(137,125,87);
+}
+
+.link_category:hover {
+  color: rgb(137,125,87);
+}
+
+hr {
+  height: 1px;
+  border: none;
+  border-top: 1px rgb(137,125,87) solid;
+  width: 90%;
+}
+
+.new_magazines {
+  text-align: center;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+
+.new_magazines a {
+  text-align: center;
+}
+
+.en_title, .ja_title {
+  color:  rgba(137,125,87,0.6);
+}
+
+.new_magazines img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+  @media screen and (max-width: 767px){
+    .new_magazines img {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+    }
+  }
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+figure.snip1212 {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  color: #000000;
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, #000000 70%);
+  background-image: linear-gradient(to bottom, #ffffff 0%, #000000 70%);
+}
+
+figure.snip1212 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+figure.snip1212 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+figure.snip1212 figcaption {
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+
+figure.snip1212 h2,
+figure.snip1212 p {
+  margin: 0;
+  width: 100%;
+}
+
+figure.snip1212 h2 {
+  font-size: 16px;
+  color: #ffffff;
+  position: absolute;
+  bottom: 100%;
+  right: 0%;
+  display: inline-block;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: right;
+  padding: 10px 5px 10px 20px;
+}
+
+figure.snip1212 p {
+  background: rgba(137,125,87,0.6);
+  color:white;
+  text-align: left;
+  bottom: 0;
+  font-size: 0.8em;
+  font-weight: 500;
+  padding: 5px;
+}
+
+figure.snip1212 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+figure.snip1212:hover img {
+  opacity: 0.4;
+}
+
+figure.snip1212:hover figcaption {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.footer {
+  height:300px;
+  background: rgb(137,125,87);
+  padding-top:70px;
+}
+
+.footer_items, .footer_text {
+  text-align: center;
+}
+
+.footer_items *{
+  display: inline-block;
+  color:white;
+}
+.footer_text *{
+  padding-top:30px;
+  color:white;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require cropper
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$xsmall:  "only screen and (max-width:767px)";
+$small: "only screen and (min-width:768px) and (max-width:991px)";
+$middle: "only screen and (min-width:992px) and (max-width:1199px)";
+$large:  "only screen and (min-width:1200px)";
+
+/*共通*/
+.container {
+}
+
+/*show*/
+.shopping_category_show {
+  margin-bottom: 20px;
+}
+
+.link_event a:hover{
+  color: rgb(137,125,87);
+}
+
+.shopping_container_show {
+  width: 80%;
+  height:900px;
+}
+  @media screen and (max-width: 991px){
+    .shopping_container_show {
+      width: 80%;
+      height:700px;
+    }
+  }
+  @media screen and (max-width: 767px){
+    .shopping_container_show {
+      width: 80%;
+      height:900px;
+    }
+  }
+
+.shopping_container_show hr {
+  width: 100%;
+}
+
+.shopping_right_area *{
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.btn-default {
+  width:200px;
+  margin-bottom:15px;
+  color: rgb(137,125,87);
+  border-color: rgb(137,125,87);
+}
+  @media screen and (max-width: 767px){
+    .btn-default {
+      font-size:12px;
+      width:120px;
+      margin-bottom:10px;
+    }
+}
+
+
+
+
+.btn-default:hover {
+  background-color: rgb(137,125,87);
+  color: white !important;
+}
+
+.btn-default:focus,.btn-default:active {
+  outline-color: rgb(137,125,87);
+  background-color: rgb(137,125,87);
+  color: white !important;
+}
+
+.btn_last_child {
+  margin-bottom:30px;
+}
+
+.shopping_right_area img{
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom:20px;
+}
+
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require cropper
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$xsmall:  "only screen and (max-width:767px)";
+$small: "only screen and (min-width:768px) and (max-width:991px)";
+$middle: "only screen and (min-width:992px) and (max-width:1199px)";
+$large:  "only screen and (min-width:1200px)";
+
+/*共通*/
+.container {
+}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require cropper
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$xsmall:  "only screen and (max-width:767px)";
+$small: "only screen and (min-width:768px) and (max-width:991px)";
+$middle: "only screen and (min-width:992px) and (max-width:1199px)";
+$large:  "only screen and (min-width:1200px)";
+
+/*共通*/
+.container {
+}
+
+/*magazines_container*/
+.title_area {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.keywords_select {
+  color: rgb(137,125,87);
+}
+
+.title_area p {
+  display: inline-block;
+}
+
+.category_top_container {
+  width: 80%;
+  height:1400px;
+}
+  @media screen and (max-width: 991px){
+    .category_top_container {
+      width: 80%;
+      height:2000px;
+    }
+  }
+  @media screen and (max-width: 767px){
+    .category_top_container {
+      width: 80%;
+      height:3100px;
+    }
+  }
+
+.contents_list {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+@media screen and (max-width: 767px){
+  .contents_list {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+.contents_list figure {
+  width: 100%;
+  object-fit: cover;
+}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require cropper
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$xsmall:  "only screen and (max-width:767px)";
+$small: "only screen and (min-width:768px) and (max-width:991px)";
+$middle: "only screen and (min-width:992px) and (max-width:1199px)";
+$large:  "only screen and (min-width:1200px)";
+
+/*共通*/
+.container {
+}
+
+
+
+.event_container {
+  width: 80%;
+  height:1150px;
+}
+  @media screen and (max-width: 991px){
+    .event_container {
+      width: 80%;
+      height:1050px;
+    }
+  }
+  @media screen and (max-width: 767px){
+    .event_container {
+      width: 80%;
+      height:1250px;
+    }
+  }
+
+.event_text_img img{
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom:20px;
+}
+
+.event_sidebar {
+  margin-bottom: 30px;
+}
+
+.event_sidebar a {
+  display: block;
+}
+
+.event_container hr {
+  width: 100%;
+}
+
+/*show*/
+.event_show_time {
+  margin-bottom: 20px;
+}
+
+.link_event a:hover{
+  color: rgb(137,125,87);
+}
+
+.event_container_show {
+  width: 80%;
+  height:900px;
+}
+  @media screen and (max-width: 991px){
+    .event_container_show {
+      width: 80%;
+      height:700px;
+    }
+  }
+  @media screen and (max-width: 767px){
+    .event_container_show {
+      width: 80%;
+      height:900px;
+    }
+  }
+
+.event_container_show hr {
+  width: 100%;
+}
