@@ -17,7 +17,7 @@
         <div class="nav_area col-sm-12 hidden-xs">
         <!-- <%# 地域のイベントナビバー %> -->
           <div class="top_category top_event col-sm-2">
-            <a href="<?php echo get_template_directory_uri(); ?>/?cat=2">
+            <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'イベント' ))) ?>">
 
               <span class="icon mp-nav-icon icon-information">
               </span>
@@ -33,7 +33,7 @@
           </div>
           <!-- <%# 地域のお店ナビバー %> -->
           <div class="top_category top_shop col-sm-2">
-            <a href="<?php echo get_template_directory_uri(); ?>/category-shop.php">
+            <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'お店' ))) ?>">
               <span class="icon mp-nav-icon icon-information">
               </span>
               <img src="<?php echo get_template_directory_uri(); ?>/img/top_shop.png">
@@ -47,13 +47,13 @@
           </div>
           <!-- <%# ロゴ %> -->
           <div class="top_category top_logo col-sm-4">
-            <a href="<?php home_url('/'); ?>">
+            <a href="<?php echo esc_url( get_home_url() ); ?>">
               <img src="<?php echo get_template_directory_uri(); ?>/img/top_logo.png">
             </a>
           </div>
           <!-- <%# ミニコミナビバー %> -->
           <div class="top_category top_magazine col-sm-2">
-            <a href="<?php echo get_template_directory_uri(); ?>/category-magazine.php">
+            <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'ミニコミ' ))) ?>">
               <span class="icon mp-nav-icon icon-information">
               </span>
               <img src="<?php echo get_template_directory_uri(); ?>/img/top_magazine.png">
@@ -67,7 +67,7 @@
           </div>
           <!-- <%# お買い物ナビバー %> -->
           <div class="top_category top_shopping col-sm-2">
-            <a href="<?php echo get_template_directory_uri(); ?>/category-shopping.php">
+            <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'お買い物' ))) ?>">
               <span class="icon mp-nav-icon icon-information">
               </span>
               <img src="<?php echo get_template_directory_uri(); ?>/img/top_shopping.png">
