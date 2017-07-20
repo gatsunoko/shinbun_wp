@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>">
     <!--bootstrap.min.cssの読み込み-->
     <link href="<?php echo get_template_directory_uri(); ?>/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <?php wp_head(); ?>
   </head>
 
   <body>
@@ -16,7 +17,8 @@
         <div class="nav_area col-sm-12 hidden-xs">
         <!-- <%# 地域のイベントナビバー %> -->
           <div class="top_category top_event col-sm-2">
-            <a href="<?php echo get_template_directory_uri(); ?>/event.php">
+            <a href="<?php echo get_template_directory_uri(); ?>/?cat=2">
+
               <span class="icon mp-nav-icon icon-information">
               </span>
               <img src="<?php echo get_template_directory_uri(); ?>/img/top_event.png">

@@ -29,3 +29,7 @@
 </div><!-- /footer -->
 <!--bootstrap.min.jsの読み込み-->
 <script src="<?php echo get_template_directory_uri(); ?>/lib/bootstrap-3.3.7-dist/js/bbootstrap.min.js"></script>
+
+  <?php wp_footer(); ?>
+  </body>
+</html>
