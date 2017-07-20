@@ -27,7 +27,7 @@
                 event
               </p>
               <p class="nav_sub_category">
-                /地域イベント
+                /地域のイベント
               </p>
             </a>
           </div>

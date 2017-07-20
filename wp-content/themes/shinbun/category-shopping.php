@@ -9,43 +9,43 @@
 
 get_header(); ?>
 
+<!-- <%# main_contents %> -->
+<div class="main_container category_top_container">
+  <div class="title_area">
+    <p class="en_title">shopping</p>
+    <p class="ja_title">/お買い物</p>
+    <div class="keywords_select">
+      <p>□書籍　□本　□チケット　□その他</p>
+    </div>
+  </div>
 
-
-<p>【お買い物カテゴリーテンプレート】</p>
-
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php
-		// Start the loop.
-		while ( have_posts() ) : the_post();
-
-			/*
-			 * Include the post format-specific template for the content. If you want to
-			 * use this in a child theme, then include a file called called content-___.php
-			 * (where ___ is the post format) and that will be used instead.
-			 */
-			get_template_part( 'content', get_post_format() );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-			// Previous/next post navigation.
-			the_post_navigation( array(
-				'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'twentyfifteen' ) . '</span> ' .
-					'<span class="screen-reader-text">' . __( 'Next post:', 'twentyfifteen' ) . '</span> ' .
-					'<span class="post-title">%title</span>',
-				'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'twentyfifteen' ) . '</span> ' .
-					'<span class="screen-reader-text">' . __( 'Previous post:', 'twentyfifteen' ) . '</span> ' .
-					'<span class="post-title">%title</span>',
-			) );
-
-		// End the loop.
-		endwhile;
-		?>
-
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+  <div class="col-xs-12 ">
+		<?php query_posts("cat=5&showposts=24"); ?>
+		<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+	    <div class="contents_list col-xs-6 col-sm-4 col-md-3">
+	      <figure class="snip1212">
+					<?php if (has_post_thumbnail()) : ?>
+					<?php the_post_thumbnail(array(100,100)); ?>
+	        <figcaption>
+	          <h2><?php echo mb_substr($post->post_title, 0, 12).'...'; ?></h2>
+	          <p>
+							<?php
+								if(mb_strlen($post->post_content, 'UTF-8')>30){
+									$content= mb_substr(strip_tags($post->post_content), 0, 25, 'UTF-8');
+									echo $content.'…';
+								}else{
+									echo strip_tags($post->post_content);
+								}
+							?>
+						</p>
+	        </figcaption>
+	        <a href="<?php the_permalink(); ?>"></a>
+	      </figure>
+	    </div>
+		<?php else: ?>
+		<?php endif; ?>
+		<?php endwhile; else: ?>
+			<?php _e('記事がありません。'); ?>
+		<?php endif; ?>
+  </div>
+</div>

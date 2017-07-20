@@ -23,7 +23,7 @@ get_header(); ?>
         <hr>
           <?php query_posts("cat=2&showposts=3"); ?>
           <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-                    <a href="<?php the_permalink(); ?>">
+          <a href="<?php the_permalink(); ?>">
             <div class="event_text col-xs-7">
               <p><?php the_time('y/m/d'); ?></p>
               <p><?php echo mb_substr($post->post_title, 0, 8).'...'; ?></p>
