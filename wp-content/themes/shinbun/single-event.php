@@ -66,6 +66,6 @@ get_header(); ?>
       </div>
     </div>
     <div class="link_event">
-      <a href="index.html" style="padding-left:5%;">>>>> event</a>
+      <a href="<?php echo esc_url( get_home_url() ); ?>" style="padding-left:5%;">>>>> event</a>
     </div>
   </div>

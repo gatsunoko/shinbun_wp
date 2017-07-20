@@ -9,8 +9,6 @@
 
 get_header(); ?>
 
-<p>お買い物詳細だよ！</p>
-
 <!-- <%# main_contents %> -->
   <div class="main_container event_container_show">
     <div class="title_area">
@@ -65,6 +63,6 @@ get_header(); ?>
       </div>
       </div>
       <div class="link_event">
-      <a href="index.html" style="padding-left:5%;">>>>> shopping</a>
+      <a href="<?php echo esc_url( get_home_url() ); ?>" style="padding-left:5%;">>>>> shopping</a>
       </div>
       </div>
