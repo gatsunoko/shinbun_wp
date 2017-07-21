@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <!-- <%# main_contents %> -->
-  <div class="main_container event_container">
+  <div class="main_container category_top_container">
     <div class="title_area">
       <p class="en_title">event</p>
       <p class="ja_title">/地域のイベント</p>
@@ -69,3 +69,5 @@ get_header(); ?>
       </div>
     </div>
   </div>
+
+      <?php get_footer(); ?>

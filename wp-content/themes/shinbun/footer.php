@@ -7,15 +7,15 @@
     <p>/</p>
     <a href="privacy_policy.html">プライバシーポリシー</a>
     <p>/</p>
-    <a href="<?php home_url('/'); ?>">ホーム</a>
+    <a href="<?php echo esc_url( get_home_url() ); ?>">ホーム</a>
     <p>/</p>
-    <a href="../magazine/index.html">ミニコミ</a>
+    <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'ミニコミ' ))) ?>">ミニコミ</a>
     <p>/</p>
-    <a href="../shopping/index.html">ショッピング</a>
+    <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'お買い物' ))) ?>">ショッピング</a>
     <p>/</p>
-    <a href="../event/index.html">地域のイベント</a>
+    <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'イベント' ))) ?>">地域のイベント</a>
     <p>/</p>
-    <a href="../shop/index.html">地域のお店</a>
+    <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'お店' ))) ?>">地域のお店</a>
     <p>/</p>
   </div>
   <div class="footer_text">
