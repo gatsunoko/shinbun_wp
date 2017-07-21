@@ -3,6 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        /* DOMが操作可能になった時に実行 */
+        $(document).ready(function(){
+            $("#mes").html("<p>Hello! Internet!</p>");
+        });
+        /* 上記の省略形 */
+        $(function(){
+            $("#mes").html("<p>Hello! Internet!</p>");
+        });
+    </script>
+
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>">
     <!--bootstrap.min.cssの読み込み-->

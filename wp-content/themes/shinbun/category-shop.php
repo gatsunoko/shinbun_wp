@@ -12,8 +12,8 @@ get_header(); ?>
 <!-- <%# main_contents %> -->
 <div class="main_container category_top_container">
   <div class="title_area">
-    <p class="en_title">お店</p>
-    <p class="ja_title">/shop</p>
+    <p class="en_title">shop</p>
+    <p class="ja_title">/地域のお店</p>
     <div class="keywords_select">
       <p>□飲食　□図書館　□スーパー　□その他</p>
     </div>

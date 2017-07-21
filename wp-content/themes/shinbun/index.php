@@ -8,7 +8,6 @@
         <?php echo do_shortcode('[metaslider id=15]'); ?>
       </div>
 
-
       <!-- </div> -->
     <!-- </div> -->
     <!-- <%# top_slideshow_end %> -->
@@ -60,9 +59,9 @@
           </div>
           <!-- new_magazine -->
           <div class="new_items col-xs-12 col-sm-6">
-            <!-- <a href="<?php the_permalink(); ?>"> -->
+            <a href="<?php the_permalink(); ?>">
               <div class="col-xs-4 col-sm-4">
-                <!-- <?php query_posts("cat=3&showposts=1"); ?> -->
+                <?php query_posts("cat=3&showposts=1"); ?>
                 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
                   <?php if (has_post_thumbnail()) : ?>
                   <?php the_post_thumbnail(array(100,100)); ?>
@@ -134,7 +133,7 @@
           </div>
           <!-- new_shop -->
           <div class="new_items col-xs-12 col-sm-6">
-            <a href="../shop/show.html">
+            <a href="<?php the_permalink(); ?>">
               <div class="col-xs-4 col-sm-4">
                 <?php query_posts("cat=4&showposts=1"); ?>
                 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
@@ -184,29 +183,34 @@
           <?php query_posts("cat=3&showposts=8"); ?>
           <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
             <div class="new_magazines col-xs-6 col-sm-4 col-md-3">
-              <figure class="snip1212">
-                <?php if (has_post_thumbnail()) : ?>
-                  <?php the_post_thumbnail(); ?>
-                <?php else: ?>
-                  <?php _e('画像がありません。'); ?>
-                <?php endif; ?>
-                <figcaption>
-                  <h2><?php echo mb_substr($post->post_title, 0, 8).'...'; ?></h2>
-                  <p><?php
-                    if(mb_strlen($post->post_content, 'UTF-8')>25){
-                      $content= mb_substr(strip_tags($post->post_content), 0, 25, 'UTF-8');
-                      echo $content.'…';
-                    }else{
-                      echo strip_tags($post->post_content);
-                    }
-                  ?></p>
-                </figcaption>
-              </figure>
-          </div>
+              <a href="<?php the_permalink(); ?>">
+                <figure class="snip1212">
+                  <?php if (has_post_thumbnail()) : ?>
+                    <?php the_post_thumbnail(); ?>
+                  <?php else: ?>
+                    <?php _e('画像がありません。'); ?>
+                  <?php endif; ?>
+                  <figcaption>
+                    <h2>
+                      <?php echo mb_substr($post->post_title, 0, 8).'...'; ?>
+                    </h2>
+                    <p>
+                      <?php
+                        if(mb_strlen($post->post_content, 'UTF-8')>25){
+                          $content= mb_substr(strip_tags($post->post_content), 0, 25, 'UTF-8');
+                          echo $content.'…';
+                        }else{
+                          echo strip_tags($post->post_content);
+                        }
+                      ?>
+                    </p>
+                  </figcaption>
+                </figure>
+              </a>
+            </div>
           <?php endwhile; else: ?>
             <?php _e('記事がありません。'); ?>
           <?php endif; ?>
-
         </div>
       </div>
     </div><!-- /main -->

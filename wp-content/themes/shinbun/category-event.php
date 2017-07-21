@@ -15,7 +15,10 @@ get_header(); ?>
       <p class="en_title">event</p>
       <p class="ja_title">/地域のイベント</p>
     </div>
-<p>【イベントカテゴリーテンプレート】</p>
+
+    <div class="keywords_select">
+      <p>□お祭り　□教室　□地域　□その他</p>
+    </div>
 
     <div class="col-xs-12">
 
