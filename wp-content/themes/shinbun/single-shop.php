@@ -17,52 +17,39 @@ get_header(); ?>
     </div>
 
     <div class="col-xs-12">
+      <hr>
+      <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+        <div class="event_text col-xs-7">
+          <p><?php echo mb_substr($post->post_title, 0, 100, 'UTF-8'); ?></p>
+          <hr>
+          <p><?php the_time('y/m/d'); ?></p>
+          <p>
+          <?php
+              if(mb_strlen($post->post_content, 'UTF-8')>500){
+                $content= mb_substr(strip_tags($post->post_content), 0, 500, 'UTF-8');
+                echo $content.'…';
+              }else{
+                echo strip_tags($post->post_content);
+              }
+            ?>
+          </p>
+        </div>
 
-      <div class="col-sm-9 col-xs-12">
-        <hr>
-          <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-            <div class="event_text col-xs-7">
-              <p><?php echo mb_substr($post->post_title, 0, 100, 'UTF-8'); ?></p>
-              <hr>
-              <p><?php the_time('y/m/d'); ?></p>
-            </div>
-
-            <div class="event_text_img col-xs-5">
-              <?php if (has_post_thumbnail()) : ?>
-                <?php the_post_thumbnail(array(100,100)); ?>
-            </div>
-            <hr>
-            <div class="event_overview col-xs-12">
-              <p>
-              <?php
-                if(mb_strlen($post->post_content, 'UTF-8')>500){
-                  $content= mb_substr(strip_tags($post->post_content), 0, 500, 'UTF-8');
-                  echo $content.'…';
-                }else{
-                  echo strip_tags($post->post_content);
-                }
-              ?>
-              </p>
-            </div>
-            <hr>
+        <div class="event_text_img_shop col-xs-5">
+          <?php if (has_post_thumbnail()) : ?>
+            <?php the_post_thumbnail(array(100,100)); ?>
           <?php else: ?>
+            <?php _e('画像がありません。'); ?>
           <?php endif; ?>
-          <?php endwhile; else: ?>
-            <?php _e('記事がありません。'); ?>
-          <?php endif; ?>
-      </div>
-      <div class="event_sidebar col-sm-3 col-xs-12">
+        </div>
         <hr>
-        <p>Archive</p>
-        <a>・2017年7月</a>
-        <a>・2017年6月</a>
-        <a>・2017年5月</a>
-        <a>・2017年4月</a>
-        <a>・2017年3月</a>
-        <a>・2017年2月</a>
-      </div>
-      </div>
-      <div class="link_event">
-      <a href="<?php echo esc_url( get_home_url() ); ?>" style="padding-left:5%;">>>>> shop</a>
-      </div>
-      </div>
+      <?php endwhile; else: ?>
+        <?php _e('記事がありません。'); ?>
+      <?php endif; ?>
+    </div>
+    <div class="link_event">
+      <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'お店' ))) ?>" style="padding-left:3%;">>>>> shop</a>
+    </div>
+  </div>
+
+  <?php get_footer(); ?>

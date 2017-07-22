@@ -1,9 +1,9 @@
 <!-- footer -->
 <div class="footer">
   <div class="footer_items col-xs-12">
-    <a href="operation_information.html">会社案内</a>
+    <a href="<?php echo get_permalink( get_page_by_path('会社案内') ->ID ); ?>">会社案内</a>
     <p>/</p>
-    <a>利用規約</a>
+    <a href="<?php echo get_permalink( get_page_by_path('利用規約') ->ID ); ?>">利用規約</a>
     <p>/</p>
     <a href="privacy_policy.html">プライバシーポリシー</a>
     <p>/</p>

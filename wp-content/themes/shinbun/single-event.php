@@ -66,6 +66,8 @@ get_header(); ?>
       </div>
     </div>
     <div class="link_event">
-      <a href="<?php echo esc_url( get_home_url() ); ?>" style="padding-left:5%;">>>>> event</a>
+      <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'イベント' ))) ?>" style="padding-left:3%;">>>>> event</a>
     </div>
   </div>
+
+    <?php get_footer(); ?>

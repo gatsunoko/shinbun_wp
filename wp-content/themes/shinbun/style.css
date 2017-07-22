@@ -85,6 +85,10 @@ a:hover {
   text-align: center;
 }
 
+.top_category *:hover {
+  text-decoration-color: rgb(137,125,87);
+}
+
 .top_category img {
   width: 45px;
   height: auto;
@@ -476,34 +480,30 @@ $large:  "only screen and (min-width:1200px)";
 
 .btn-default {
   width:200px;
-  margin-bottom:15px;
-  color: rgb(137,125,87);
-  border-color: rgb(137,125,87);
+  color: rgb(137,125,87) !important;
+  border-color: rgb(137,125,87) !important;
 }
   @media screen and (max-width: 767px){
     .btn-default {
       font-size:12px;
       width:120px;
-      margin-bottom:10px;
+      margin-bottom:10px  !important;
     }
 }
 
-
-
+.btn-default:last-child {
+  margin-top: 20px;
+}
 
 .btn-default:hover {
-  background-color: rgb(137,125,87);
+  background-color: rgb(137,125,87) !important;
   color: white !important;
 }
 
 .btn-default:focus,.btn-default:active {
-  outline-color: rgb(137,125,87);
-  background-color: rgb(137,125,87);
+  outline-color: rgb(137,125,87) !important;
+  background-color: rgb(137,125,87) !important;
   color: white !important;
-}
-
-.btn_last_child {
-  margin-bottom:30px;
 }
 
 .shopping_right_area img{
@@ -614,41 +614,11 @@ $large:  "only screen and (min-width:1200px)";
   }
 }
 
+
 .contents_list figure {
-  width: 100%;
+  width: 95%;
   object-fit: cover;
 }
-
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- *= require cropper
- */
-
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
-$xsmall:  "only screen and (max-width:767px)";
-$small: "only screen and (min-width:768px) and (max-width:991px)";
-$middle: "only screen and (min-width:992px) and (max-width:1199px)";
-$large:  "only screen and (min-width:1200px)";
-
-/*共通*/
-.container {
-}
-
-
 
 .event_container {
   width: 80%;
@@ -667,8 +637,24 @@ $large:  "only screen and (min-width:1200px)";
     }
   }
 
-.event_text_img img{
-  width: 90%;
+.event_text p {
+  color: rgb(137,125,87);
+}
+
+.event_text_img, .event_text_img_shop {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.event_text_img img {
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom:20px;
+}
+
+.event_text_img_shop img {
+  width: 50%;
   height: auto;
   object-fit: cover;
   margin-bottom:20px;
@@ -714,4 +700,31 @@ $large:  "only screen and (min-width:1200px)";
 
 .event_container_show hr {
   width: 100%;
+}
+.single_title {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.single_content {
+  font-size: 16px;
+  line-height: 1.8;
+}
+  @media screen and (max-width: 767px){
+    .single_content {
+      font-size: 14px;
+    }
+  }
+
+/* page */
+.page_content_area p {
+  color: rgb(137,125,87);
+}
+
+.link_event {
+  margin-top: 30px;
+}
+
+.link_event a {
+  color: rgb(137,125,87);
 }
