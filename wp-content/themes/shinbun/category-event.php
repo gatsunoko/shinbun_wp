@@ -60,12 +60,7 @@ get_header(); ?>
       <div class="event_sidebar col-sm-3 col-xs-12">
         <hr>
         <p>Archive</p>
-        <a>・2017年7月</a>
-        <a>・2017年6月</a>
-        <a>・2017年5月</a>
-        <a>・2017年4月</a>
-        <a>・2017年3月</a>
-        <a>・2017年2月</a>
+        <ul><?php wp_get_archives( 'type=monthly&limit=12' ); ?></ul>
       </div>
     </div>
   </div>
