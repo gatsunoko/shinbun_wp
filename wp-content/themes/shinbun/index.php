@@ -34,16 +34,17 @@
                   <?php _e('画像がありません。'); ?>
                 <?php endif; ?>
               </div>
-              <div class="col-xs-8 col-sm-8">
+              <div class="index_single-text col-xs-8 col-sm-8">
                 <?php query_posts("cat=2&showposts=1"); ?>
                 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+                <p><?php echo mb_substr($post->post_title, 0, 12).'...'; ?></p>
+                <br>
                 <p><?php the_time('y/m/d'); ?></p>
-                <p><?php echo mb_substr($post->post_title, 0, 8).'...'; ?></p>
                 <br>
                 <p>
                   <?php
-                    if(mb_strlen($post->post_content, 'UTF-8')>20){
-                      $content= mb_substr(strip_tags($post->post_content), 0, 20, 'UTF-8');
+                    if(mb_strlen($post->post_content, 'UTF-8')>30){
+                      $content= mb_substr(strip_tags($post->post_content), 0, 30, 'UTF-8');
                       echo $content.'…';
                     }else{
                       echo strip_tags($post->post_content);
@@ -71,16 +72,17 @@
                   <?php _e('画像がありません。'); ?>
                 <?php endif; ?>
               </div>
-              <div class="col-xs-8 col-sm-8">
+              <div class="index_single-text col-xs-8 col-sm-8">
                 <?php query_posts("cat=3&showposts=1"); ?>
                 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+                <p><?php echo mb_substr($post->post_title, 0, 12).'...'; ?></p>
+                <br>
                 <p><?php the_time('y/m/d'); ?></p>
-                <p><?php echo mb_substr($post->post_title, 0, 8).'...'; ?></p>
                 <br>
                 <p>
                   <?php
-                    if(mb_strlen($post->post_content, 'UTF-8')>20){
-                      $content= mb_substr(strip_tags($post->post_content), 0, 20, 'UTF-8');
+                    if(mb_strlen($post->post_content, 'UTF-8')>30){
+                      $content= mb_substr(strip_tags($post->post_content), 0, 30, 'UTF-8');
                       echo $content.'…';
                     }else{
                       echo strip_tags($post->post_content);
@@ -108,11 +110,12 @@
                   <?php _e('画像がありません。'); ?>
                 <?php endif; ?>
               </div>
-              <div class="col-xs-8 col-sm-8">
+              <div class="index_single-text col-xs-8 col-sm-8">
                 <?php query_posts("cat=5&showposts=1"); ?>
                 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-                <p><?php the_time('y/m/d'); ?></p>
                 <p><?php echo mb_substr($post->post_title, 0, 12).'...'; ?></p>
+                <br>
+                <p><?php the_time('y/m/d'); ?></p>
                 <br>
                 <p>
                   <?php
@@ -145,16 +148,17 @@
                   <?php _e('画像がありません。'); ?>
                 <?php endif; ?>
               </div>
-              <div class="col-xs-8 col-sm-8">
+              <div class="index_single-text col-xs-8 col-sm-8">
                 <?php query_posts("cat=4&showposts=1"); ?>
                 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+                <p class="index_single_title"><?php echo mb_substr($post->post_title, 0, 12).'...'; ?></p>
+                <br>
                 <p><?php the_time('y/m/d'); ?></p>
-                <p><?php echo mb_substr($post->post_title, 0, 8).'...'; ?></p>
                 <br>
                 <p>
                   <?php
-                    if(mb_strlen($post->post_content, 'UTF-8')>20){
-                      $content= mb_substr(strip_tags($post->post_content), 0, 20, 'UTF-8');
+                    if(mb_strlen($post->post_content, 'UTF-8')>30){
+                      $content= mb_substr(strip_tags($post->post_content), 0, 30, 'UTF-8');
                       echo $content.'…';
                     }else{
                       echo strip_tags($post->post_content);
@@ -192,12 +196,12 @@
                   <?php endif; ?>
                   <figcaption>
                     <h2>
-                      <?php echo mb_substr($post->post_title, 0, 8).'...'; ?>
+                      <?php echo mb_substr($post->post_title, 0, 11).'...'; ?>
                     </h2>
                     <p>
                       <?php
-                        if(mb_strlen($post->post_content, 'UTF-8')>25){
-                          $content= mb_substr(strip_tags($post->post_content), 0, 25, 'UTF-8');
+                        if(mb_strlen($post->post_content, 'UTF-8')>23){
+                          $content= mb_substr(strip_tags($post->post_content), 0, 23, 'UTF-8');
                           echo $content.'…';
                         }else{
                           echo strip_tags($post->post_content);

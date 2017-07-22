@@ -5,7 +5,7 @@
     <p>/</p>
     <a href="<?php echo get_permalink( get_page_by_path('利用規約') ->ID ); ?>">利用規約</a>
     <p>/</p>
-    <a href="privacy_policy.html">プライバシーポリシー</a>
+    <a href="<?php echo get_permalink( get_page_by_path('プライバシーポリシー') ->ID ); ?>">プライバシーポリシー</a>
     <p>/</p>
     <a href="<?php echo esc_url( get_home_url() ); ?>">ホーム</a>
     <p>/</p>

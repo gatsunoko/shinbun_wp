@@ -22,7 +22,10 @@ get_header(); ?>
         <div class="event_text col-xs-7">
           <p><?php echo mb_substr($post->post_title, 0, 100, 'UTF-8'); ?></p>
           <hr>
-          <p><?php the_time('y/m/d'); ?></p>
+          <div class="tags_area">
+            <p><?php the_tags('タグ: #',' #'); ?></p>
+            <p><?php the_time('y/m/d'); ?></p>
+          </div>
           <p>
           <?php
               if(mb_strlen($post->post_content, 'UTF-8')>500){
@@ -50,6 +53,11 @@ get_header(); ?>
     <div class="link_event">
       <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'お店' ))) ?>" style="padding-left:3%;">>>>> shop</a>
     </div>
+    <div class="event_sidebar col-xs-12">
+      <hr>
+      <p>カテゴリー</p>
+    </div>
+
   </div>
 
   <?php get_footer(); ?>

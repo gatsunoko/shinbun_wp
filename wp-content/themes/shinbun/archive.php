@@ -22,35 +22,49 @@ get_header(); ?>
   					the_archive_title( '<h1 class="page-title">', '</h1>' );
   					the_archive_description( '<div class="taxonomy-description">', '</div>' );
   				?>
+      <?php else: ?>
+      <?php endif; ?>
   			</header><!-- .page-header -->
+        <div class="col-sm-9 col-xs-12">
+          <hr>
+          <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+            <a href="<?php the_permalink(); ?>">
+              <div class="event_text col-xs-7">
+                <p><?php the_time('y/m/d'); ?></p>
+                <h2>
+                  <?php
+                    if(mb_strlen($post->post_title, 'UTF-8')>25){
+                      $title= mb_substr(strip_tags($post->post_title), 0, 25, 'UTF-8');
+                      echo $title.'…';
+                    }else{
+                      echo strip_tags($post->post_title);
+                    }
+                  ?>
+                </h2>
+                <p>
+                <?php
+                  if(mb_strlen($post->post_content, 'UTF-8')>50){
+                    $content= mb_substr(strip_tags($post->post_content), 0, 50, 'UTF-8');
+                    echo $content.'…';
+                  }else{
+                    echo strip_tags($post->post_content);
+                  }
+                ?>
+                </p>
+              </div>
 
-  			<?php
-  			// Start the Loop.
-  			while ( have_posts() ) : the_post();
-
-  				/*
-  				 * Include the Post-Format-specific template for the content.
-  				 * If you want to override this in a child theme, then include a file
-  				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-  				 */
-  				get_template_part( 'template-parts/content', get_post_format() );
-
-  			// End the loop.
-  			endwhile;
-
-  			// Previous/next page navigation.
-  			the_posts_pagination( array(
-  				'prev_text'          => __( 'Previous page', 'twentysixteen' ),
-  				'next_text'          => __( 'Next page', 'twentysixteen' ),
-  				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
-  			) );
-
-  		// If no content, include the "No posts found" template.
-  		else :
-  			get_template_part( 'template-parts/content', 'none' );
-
-  		endif;
-  		?>
+              <div class="event_text_img col-xs-5">
+                <?php if (has_post_thumbnail()) : ?>
+                  <?php the_post_thumbnail(array(100,100)); ?>
+              </div>
+            </a>
+          <?php else: ?>
+          <?php endif; ?>
+          <?php endwhile; else: ?>
+            <?php _e('記事がありません。'); ?>
+          <?php endif; ?>
+          <hr>
+        </div>
     </div>
   </div>
 

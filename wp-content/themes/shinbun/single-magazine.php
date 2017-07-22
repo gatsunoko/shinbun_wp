@@ -51,8 +51,6 @@ get_header(); ?>
         title="<?php the_title(); ?>"> <?php the_title(); ?></a></li>
         <?php endforeach; ?>
       </div>
-
-
     </div>
   </div>
 

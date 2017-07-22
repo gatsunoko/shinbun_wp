@@ -13,15 +13,14 @@
 
 get_header(); ?>
 
-<div class="main_container category_top_container">
+<div class="main_container page_container">
 	<?php if(is_page('会社案内')): ?>
 	  <div class="title_area">
 			<p class="en_title">Company</p>
 			<p class="ja_title">/会社案内</p>
 		</div>
-		<hr>
 		<br>
-		<div class="page_content_area">
+		<div class="page_content_area col-xs-12">
 			<p>
 				<?php
 					$page_info = get_page_by_path('会社案内');
@@ -41,6 +40,22 @@ get_header(); ?>
 				<p>
 					<?php
 						$page_info = get_page_by_path('利用規約');
+						$page = get_post($page_info);
+						echo $page->post_content;
+					?>
+				</p>
+			</div>
+		<?php elseif(is_page('プライバシーポリシー')): ?>
+			<div class="title_area">
+				<p class="en_title">Privacy</p>
+				<p class="ja_title">/プライバシーポリシー</p>
+			</div>
+			<hr>
+			<br>
+			<div class="page_content_area">
+				<p>
+					<?php
+						$page_info = get_page_by_path('プライバシーポリシー');
 						$page = get_post($page_info);
 						echo $page->post_content;
 					?>

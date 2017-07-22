@@ -25,13 +25,25 @@ get_header(); ?>
 	    <div class="contents_list col-xs-6 col-sm-4 col-md-3">
 	      <figure class="snip1212">
 					<?php if (has_post_thumbnail()) : ?>
-					<?php the_post_thumbnail(array(100,100)); ?>
+					       <?php the_post_thumbnail(array(100,100)); ?>
+          <?php else: ?>
+            <?php _e('画像がありません。'); ?>
+          <?php endif; ?>
 	        <figcaption>
-	          <h2><?php echo mb_substr($post->post_title, 0, 12).'...'; ?></h2>
+	          <h2>
+              <?php
+                if(mb_strlen($post->post_title, 'UTF-8')>12){
+                  $title= mb_substr(strip_tags($post->post_title), 0, 12, 'UTF-8');
+                  echo $title.'…';
+                }else{
+                  echo strip_tags($post->post_title);
+                }
+              ?>
+            </h2>
 	          <p>
 							<?php
-								if(mb_strlen($post->post_content, 'UTF-8')>30){
-									$content= mb_substr(strip_tags($post->post_content), 0, 25, 'UTF-8');
+								if(mb_strlen($post->post_content, 'UTF-8')>23){
+									$content= mb_substr(strip_tags($post->post_content), 0, 23, 'UTF-8');
 									echo $content.'…';
 								}else{
 									echo strip_tags($post->post_content);
@@ -42,8 +54,6 @@ get_header(); ?>
 	        <a href="<?php the_permalink(); ?>"></a>
 	      </figure>
 	    </div>
-		<?php else: ?>
-		<?php endif; ?>
 		<?php endwhile; else: ?>
 			<?php _e('記事がありません。'); ?>
 		<?php endif; ?>

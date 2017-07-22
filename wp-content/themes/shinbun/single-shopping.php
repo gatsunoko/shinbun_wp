@@ -34,14 +34,17 @@ get_header(); ?>
           </p>
         </div>
 
-        <div class="event_text_img col-xs-5">
+        <div class="event_text_img_shop col-xs-5">
           <?php if (has_post_thumbnail()) : ?>
             <?php the_post_thumbnail(array(100,100)); ?>
           <?php else: ?>
             <?php _e('画像がありません。'); ?>
           <?php endif; ?>
           <div class="application_btn col-xs-12">
-            <button type="button" class="btn btn-default">FAXでお申し込み</button>
+            <a href="http://192.168.33.10:3000/wp-content/uploads/2017/07/商品申込書.pdf">
+              <button type="button" class="btn btn-default">FAXでお申し込み</button>
+            </a>
+            <a href="<?php echo get_permalink( get_page_by_path('会社案内') ->ID ); ?>">
             <button type="button" class="btn btn-default btn_last_child">お電話で申し込み</button>
           </div>
         </div>
