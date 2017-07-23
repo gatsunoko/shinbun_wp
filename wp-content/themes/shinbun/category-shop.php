@@ -20,7 +20,7 @@ get_header(); ?>
   </div>
 
   <div class="col-xs-12 ">
-		<?php query_posts("cat=4&showposts=24&orderby=rand"); ?>
+		<?php get_posts("orderby=rand"); ?>
 		<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 	    <div class="contents_list col-xs-6 col-sm-4 col-md-3">
 	      <figure class="snip1212">

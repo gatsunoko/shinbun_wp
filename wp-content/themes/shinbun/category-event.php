@@ -24,7 +24,6 @@ get_header(); ?>
 
       <div class="col-sm-9 col-xs-12">
         <hr>
-          <?php query_posts("cat=2&showposts=3"); ?>
           <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
           <a href="<?php the_permalink(); ?>">
             <div class="event_text col-xs-7">
