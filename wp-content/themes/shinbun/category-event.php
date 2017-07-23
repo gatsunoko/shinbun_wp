@@ -11,6 +11,9 @@ get_header(); ?>
 
 <!-- <%# main_contents %> -->
   <div class="main_container category_top_container">
+    <div class="breadcrumb_list">
+      <?php breadcrumb(); ?>
+    </div>
     <div class="title_area">
       <p class="en_title">event</p>
       <p class="ja_title">/地域のイベント</p>
@@ -63,6 +66,7 @@ get_header(); ?>
         <ul><?php wp_get_archives( 'type=monthly&limit=12&cat=' . $cat_id ); ?></ul>
       </div>
     </div>
+    <?php wp_pagenavi(); ?>
   </div>
 
       <?php get_footer(); ?>

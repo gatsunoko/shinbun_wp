@@ -30,6 +30,14 @@ h1 {
   margin-bottom: 20px;
 }
 
+.breadcrumb_list *{
+  color: rgb(137,125,87);
+}
+
+.breadcrumb_list *:hover {
+  text-decoration-color: rgb(137,125,87);
+}
+
 a:hover {
   color: rgb(137,125,87);
 }

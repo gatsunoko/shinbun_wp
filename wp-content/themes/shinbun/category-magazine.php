@@ -11,6 +11,9 @@ get_header(); ?>
 
 <!-- <%# main_contents %> -->
 <div class="main_container category_top_container">
+  <div class="breadcrumb_list">
+    <?php breadcrumb(); ?>
+  </div>
   <div class="title_area">
     <p class="en_title">magazine</p>
     <p class="ja_title">/ミニコミ</p>
@@ -18,7 +21,6 @@ get_header(); ?>
       <p>□歴史　□料理　□雑学　□地元</p>
     </div>
   </div>
-
   <div class="col-xs-12 ">
 		<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 	    <div class="contents_list col-xs-6 col-sm-4 col-md-3">
@@ -48,6 +50,7 @@ get_header(); ?>
 			<?php _e('記事がありません。'); ?>
 		<?php endif; ?>
   </div>
+  <?php wp_pagenavi(); ?>
 </div>
 
     <?php get_footer(); ?>

@@ -11,6 +11,9 @@ get_header(); ?>
 
 <!-- <%# main_contents %> -->
   <div class="main_container event_container_show">
+    <div class="breadcrumb_list">
+      <?php breadcrumb(); ?></p>
+    </div>
     <div class="title_area">
       <p class="en_title">shoping</p>
       <p class="ja_title">/お買い物</p>

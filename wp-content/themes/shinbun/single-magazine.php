@@ -10,6 +10,9 @@
 get_header(); ?>
 
   <div class="main_container event_container_show">
+    <div class="breadcrumb_list">
+      <?php breadcrumb(); ?>
+    </div>
     <div class="title_area">
       <p class="en_title">magagine</p>
       <p class="ja_title">/ミニコミ</p>

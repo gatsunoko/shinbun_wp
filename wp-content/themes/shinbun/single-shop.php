@@ -11,11 +11,13 @@ get_header(); ?>
 
 <!-- <%# main_contents %> -->
   <div class="main_container event_container_show">
+    <div class="breadcrumb_list">
+      <?php breadcrumb(); ?>
+    </div>
     <div class="title_area">
       <p class="en_title">shop</p>
       <p class="ja_title">/地域のお店</p>
     </div>
-
     <div class="col-xs-12">
       <div class="border">
       </div>

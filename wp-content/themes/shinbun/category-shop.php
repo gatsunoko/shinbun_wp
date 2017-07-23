@@ -11,6 +11,9 @@ get_header(); ?>
 
 <!-- <%# main_contents %> -->
 <div class="main_container category_top_container">
+  <div class="breadcrumb_list">
+    <?php breadcrumb(); ?>
+  </div>
   <div class="title_area">
     <p class="en_title">shop</p>
     <p class="ja_title">/地域のお店</p>
@@ -51,6 +54,7 @@ get_header(); ?>
 			<?php _e('記事がありません。'); ?>
 		<?php endif; ?>
   </div>
+  <?php wp_pagenavi(); ?>
 </div>
 
     <?php get_footer(); ?>
