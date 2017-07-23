@@ -22,11 +22,12 @@ get_header(); ?>
   					the_archive_title( '<h1 class="page-title">', '</h1>' );
   					the_archive_description( '<div class="taxonomy-description">', '</div>' );
   				?>
+  			</header><!-- .page-header -->
       <?php else: ?>
       <?php endif; ?>
-  			</header><!-- .page-header -->
         <div class="col-sm-9 col-xs-12">
-          <hr>
+          <div class="border">
+          </div>
           <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
             <a href="<?php the_permalink(); ?>">
               <div class="event_text col-xs-7">
@@ -55,7 +56,8 @@ get_header(); ?>
           <?php endwhile; else: ?>
             <?php _e('記事がありません。'); ?>
           <?php endif; ?>
-          <hr>
+          <div class="border">
+          </div>
         </div>
     </div>
   </div>

@@ -24,6 +24,12 @@ h1 {
   margin-bottom: 30px;
 }
 
+.border {
+  border-top: 1px solid rgb(137,125,87);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
 
 a:hover {
   color: rgb(137,125,87);
@@ -50,7 +56,6 @@ a:hover {
       height:950px;
     }
   }
-
 
 /*ナビバー*/
 .navbar {
@@ -374,8 +379,8 @@ figure.snip1212 h2 {
   display: inline-block;
   font-weight: 400;
   text-transform: uppercase;
-  text-align: right;
-  padding: 7px 3px 7px 3px;
+  text-align: left;
+  padding: 5px;
   line-height: 1.4;
 }
 

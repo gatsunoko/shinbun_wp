@@ -23,7 +23,8 @@ get_header(); ?>
     <div class="col-xs-12">
 
       <div class="col-sm-9 col-xs-12">
-        <hr>
+        <div class="border">
+        </div>
           <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
           <a href="<?php the_permalink(); ?>">
             <div class="event_text col-xs-7">
@@ -51,14 +52,17 @@ get_header(); ?>
           <?php endwhile; else: ?>
             <?php _e('記事がありません。'); ?>
           <?php endif; ?>
-        <hr>
+          <div class="border">
+          </div>
       </div>
 
 
       <div class="event_sidebar col-sm-3 col-xs-12">
-        <hr>
-        <p>Archive</p>
-        <ul><?php wp_get_archives( 'type=monthly&limit=12' ); ?></ul>
+        <div class="border">
+        </div>
+        <h3>Archive</h3>
+        <?php $cat_id = get_cat_id('地域のイベント'); ?>
+        <ul><?php wp_get_archives( 'type=monthly&limit=12&cat=' . $cat_id ); ?></ul>
       </div>
     </div>
   </div>

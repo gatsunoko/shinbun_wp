@@ -18,7 +18,8 @@ get_header(); ?>
     <div class="col-xs-12">
       <p class="single_title"><?php echo mb_substr($post->post_title, 0, 1000); ?></p>
       <p><?php the_time('y/m/d'); ?></p>
-      <hr>
+      <div class="border">
+      </div>
       <br>
       <p class="single_content">
         <?php

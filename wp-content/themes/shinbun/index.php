@@ -56,7 +56,7 @@
                 <?php endif; ?>
               </div>
             </a>
-            <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'イベント' ))) ?>" class="link_category">event</a>
+            <a href="<?php echo esc_url( get_category_link( get_cat_ID( '地域のイベント' ))) ?>" class="link_category">event</a>
           </div>
           <!-- new_magazine -->
           <div class="new_items col-xs-12 col-sm-6">
@@ -170,7 +170,7 @@
                 <?php endif; ?>
               </div>
             </a>
-            <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'お店' ))) ?>" class="link_category">shop</a>
+            <a href="<?php echo esc_url( get_category_link( get_cat_ID( '地域のお店' ))) ?>" class="link_category">shop</a>
           </div>
         </div>
       </div>

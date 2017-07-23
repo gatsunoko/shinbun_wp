@@ -29,7 +29,7 @@
         <div class="nav_area col-sm-12 hidden-xs">
         <!-- <%# 地域のイベントナビバー %> -->
           <div class="top_category top_event col-sm-2">
-            <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'イベント' ))) ?>">
+            <a href="<?php echo esc_url( get_category_link( get_cat_ID( '地域のイベント' ))) ?>">
 
               <span class="icon mp-nav-icon icon-information">
               </span>
@@ -45,7 +45,7 @@
           </div>
           <!-- <%# 地域のお店ナビバー %> -->
           <div class="top_category top_shop col-sm-2">
-            <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'お店' ))) ?>">
+            <a href="<?php echo esc_url( get_category_link( get_cat_ID( '地域のお店' ))) ?>">
               <span class="icon mp-nav-icon icon-information">
               </span>
               <img src="<?php echo get_template_directory_uri(); ?>/img/top_shop.png">

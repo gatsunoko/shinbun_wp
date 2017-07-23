@@ -18,11 +18,13 @@ get_header(); ?>
 
     <div class="col-xs-12">
       <div class="col-sm-9 col-xs-12">
-        <hr>
+        <div class="border">
+        </div>
         <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
           <div class="event_text col-xs-7">
             <p><?php echo mb_substr($post->post_title, 0, 100, 'UTF-8'); ?></p>
-            <hr>
+            <div class="border">
+            </div>
             <p><?php the_time('y/m/d'); ?></p>
             <p>
               <?php
@@ -43,18 +45,19 @@ get_header(); ?>
               <?php _e('画像がありません。'); ?>
             <?php endif; ?>
           </div>
-          <hr>
+          <div class="border">
+          </div>
         <?php endwhile; else: ?>
           <?php _e('記事がありません。'); ?>
         <?php endif; ?>
       </div>
       <div class="event_sidebar col-sm-3 col-xs-12">
-        <hr>
+        <div class="border">
+        </div>
         <h3>Archive</h3>
-        <ul>
           <h4>投稿月</h4>
-          <?php wp_get_archives( 'type=monthly&limit=12' ); ?>
-        </ul>
+          <?php $cat_id = get_cat_id('地域のイベント'); ?>
+          <ul><?php wp_get_archives( 'type=monthly&limit=12&cat=' . $cat_id ); ?></ul>
 
         <h4>カテゴリー</h4>
         <ul>

@@ -16,11 +16,11 @@ get_header(); ?>
       <p class="ja_title">/お買い物</p>
     </div>
     <div class="col-xs-12">
-      <hr>
       <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
         <div class="event_text col-xs-7">
           <p><?php echo mb_substr($post->post_title, 0, 100, 'UTF-8'); ?></p>
-          <hr>
+          <div class="border">
+          </div>
           <p><?php the_time('y/m/d'); ?></p>
           <p>
             <?php
@@ -48,7 +48,8 @@ get_header(); ?>
             <button type="button" class="btn btn-default btn_last_child">お電話で申し込み</button>
           </div>
         </div>
-        <hr>
+        <div class="border">
+        </div>
       <?php endwhile; else: ?>
         <?php _e('記事がありません。'); ?>
       <?php endif; ?>
@@ -58,7 +59,8 @@ get_header(); ?>
     </div>
 
     <div class="event_sidebar col-xs-12">
-      <hr>
+      <div class="border">
+      </div>
       <p>関連商品</p>
       <p>カテゴリー</p>
     </div>
