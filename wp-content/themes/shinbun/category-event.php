@@ -52,8 +52,6 @@ get_header(); ?>
           <?php endwhile; else: ?>
             <?php _e('記事がありません。'); ?>
           <?php endif; ?>
-          <div class="border">
-          </div>
       </div>
 
 

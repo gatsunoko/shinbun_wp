@@ -14,6 +14,7 @@ get_header(); ?>
   <div class="title_area">
     <p class="en_title">shop</p>
     <p class="ja_title">/地域のお店</p>
+
     <div class="keywords_select">
       <p>□飲食　□図書館　□スーパー　□その他</p>
     </div>

@@ -15,6 +15,8 @@ get_header(); ?>
       <p class="en_title">shoping</p>
       <p class="ja_title">/お買い物</p>
     </div>
+    <div class="border">
+    </div>
     <div class="col-xs-12">
       <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
         <div class="event_text col-xs-7">
@@ -48,19 +50,19 @@ get_header(); ?>
             <button type="button" class="btn btn-default btn_last_child">お電話で申し込み</button>
           </div>
         </div>
-        <div class="border">
-        </div>
       <?php endwhile; else: ?>
         <?php _e('記事がありません。'); ?>
       <?php endif; ?>
     </div>
+
     <div class="link_event">
       <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'お買い物' ))) ?>" style="padding-left:3%;">>>>> shopping</a>
     </div>
 
+    <div class="border">
+    </div>
+
     <div class="event_sidebar col-xs-12">
-      <div class="border">
-      </div>
       <p>関連商品</p>
       <p>カテゴリー</p>
     </div>

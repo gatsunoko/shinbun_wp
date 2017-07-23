@@ -45,8 +45,6 @@ get_header(); ?>
               <?php _e('画像がありません。'); ?>
             <?php endif; ?>
           </div>
-          <div class="border">
-          </div>
         <?php endwhile; else: ?>
           <?php _e('記事がありません。'); ?>
         <?php endif; ?>
@@ -67,6 +65,8 @@ get_header(); ?>
     </div>
     <div class="link_event">
       <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'イベント' ))) ?>" style="padding-left:3%;">>>>> event</a>
+    </div>
+    <div class="border">
     </div>
   </div>
 

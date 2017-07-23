@@ -47,8 +47,6 @@ get_header(); ?>
             <?php _e('画像がありません。'); ?>
           <?php endif; ?>
         </div>
-        <div class="border">
-        </div>
       <?php endwhile; else: ?>
         <?php _e('記事がありません。'); ?>
       <?php endif; ?>
