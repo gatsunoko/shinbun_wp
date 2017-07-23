@@ -54,7 +54,7 @@ get_header(); ?>
       <?php endif; ?>
     </div>
     <div class="link_event">
-      <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'お店' ))) ?>" style="padding-left:3%;">>>>> shop</a>
+      <a href="<?php echo esc_url( get_category_link( get_cat_ID( '地域のお店' ))) ?>" style="padding-left:3%;">>>>> shop</a>
     </div>
     <div class="event_sidebar col-xs-12">
       <div class="border">
