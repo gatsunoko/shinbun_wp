@@ -41,25 +41,17 @@ get_header(); ?>
                     }
                   ?>
                 </h2>
-                <p>
-                <?php
-                  if(mb_strlen($post->post_content, 'UTF-8')>50){
-                    $content= mb_substr(strip_tags($post->post_content), 0, 50, 'UTF-8');
-                    echo $content.'…';
-                  }else{
-                    echo strip_tags($post->post_content);
-                  }
-                ?>
-                </p>
+                <p><?php the_excerpt(); ?></p>
               </div>
 
               <div class="event_text_img col-xs-5">
                 <?php if (has_post_thumbnail()) : ?>
                   <?php the_post_thumbnail(array(100,100)); ?>
+                <?php else: ?>
+                  <?php _e('画像がありません。'); ?>
+                <?php endif; ?>
               </div>
             </a>
-          <?php else: ?>
-          <?php endif; ?>
           <?php endwhile; else: ?>
             <?php _e('記事がありません。'); ?>
           <?php endif; ?>

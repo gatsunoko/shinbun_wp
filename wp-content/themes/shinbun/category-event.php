@@ -28,28 +28,18 @@ get_header(); ?>
           <a href="<?php the_permalink(); ?>">
             <div class="event_text col-xs-7">
               <p><?php the_time('y/m/d'); ?></p>
-              <h2>
+  	          <h2>
                 <?php
-                  if(mb_strlen($post->post_title, 'UTF-8')>25){
-                    $title= mb_substr(strip_tags($post->post_title), 0, 25, 'UTF-8');
-                    echo $title.'…';
+                  if(mb_strlen($post->post_title, 'UTF-8')>10){
+                    $content= mb_substr(strip_tags($post->post_title), 0, 10, 'UTF-8');
+                    echo $content.'…';
                   }else{
                     echo strip_tags($post->post_title);
                   }
                 ?>
               </h2>
-              <p>
-              <?php
-                if(mb_strlen($post->post_content, 'UTF-8')>50){
-                  $content= mb_substr(strip_tags($post->post_content), 0, 50, 'UTF-8');
-                  echo $content.'…';
-                }else{
-                  echo strip_tags($post->post_content);
-                }
-              ?>
-              </p>
+              <p><?php the_excerpt(); ?></p>
             </div>
-
             <div class="event_text_img col-xs-5">
               <?php if (has_post_thumbnail()) : ?>
                 <?php the_post_thumbnail(array(100,100)); ?>
@@ -58,7 +48,6 @@ get_header(); ?>
               <?php endif; ?>
             </div>
           </a>
-
           <?php endwhile; else: ?>
             <?php _e('記事がありません。'); ?>
           <?php endif; ?>

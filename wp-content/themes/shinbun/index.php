@@ -196,12 +196,19 @@
                   <?php endif; ?>
                   <figcaption>
                     <h2>
-                      <?php echo mb_substr($post->post_title, 0, 11).'...'; ?>
+                      <?php
+                        if(mb_strlen($post->post_title, 'UTF-8')>10){
+                          $content= mb_substr(strip_tags($post->post_title), 0, 10, 'UTF-8');
+                          echo $content.'…';
+                        }else{
+                          echo strip_tags($post->post_title);
+                        }
+                      ?>
                     </h2>
                     <p>
                       <?php
-                        if(mb_strlen($post->post_content, 'UTF-8')>23){
-                          $content= mb_substr(strip_tags($post->post_content), 0, 23, 'UTF-8');
+                        if(mb_strlen($post->post_content, 'UTF-8')>40){
+                          $content= mb_substr(strip_tags($post->post_content), 0, 40, 'UTF-8');
                           echo $content.'…';
                         }else{
                           echo strip_tags($post->post_content);

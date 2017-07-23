@@ -31,24 +31,15 @@ get_header(); ?>
 	        <figcaption>
 	          <h2>
               <?php
-                if(mb_strlen($post->post_title, 'UTF-8')>12){
-                  $title= mb_substr(strip_tags($post->post_title), 0, 12, 'UTF-8');
+                if(mb_strlen($post->post_title, 'UTF-8')>10){
+                  $title= mb_substr(strip_tags($post->post_title), 0, 10, 'UTF-8');
                   echo $title.'…';
                 }else{
                   echo strip_tags($post->post_title);
                 }
               ?>
             </h2>
-	          <p>
-							<?php
-								if(mb_strlen($post->post_content, 'UTF-8')>23){
-									$content= mb_substr(strip_tags($post->post_content), 0, 23, 'UTF-8');
-									echo $content.'…';
-								}else{
-									echo strip_tags($post->post_content);
-								}
-							?>
-						</p>
+            <p><?php the_excerpt(); ?></p>
 	        </figcaption>
 	        <a href="<?php the_permalink(); ?>"></a>
 	      </figure>

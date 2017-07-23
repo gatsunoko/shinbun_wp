@@ -11,6 +11,17 @@
 // add_action( 'wp_enqueue_scripts', 'my_bootstrap_scripts' );
 
 
+function new_excerpt_mblength($length) {
+  return 80;
+}
+add_filter('excerpt_mblength', 'new_excerpt_mblength');
+
+function new_excerpt_more($more) {
+  return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
+
 /* jQuery の読み込み */
 function add_my_scripts() {
     if(is_admin()) return; //管理画面ではスクリプトは読み込まない
