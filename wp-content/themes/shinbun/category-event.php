@@ -53,10 +53,12 @@ get_header(); ?>
             <div class="event_text_img col-xs-5">
               <?php if (has_post_thumbnail()) : ?>
                 <?php the_post_thumbnail(array(100,100)); ?>
+              <?php else: ?>
+                <?php _e('画像がありません。'); ?>
+              <?php endif; ?>
             </div>
           </a>
-          <?php else: ?>
-          <?php endif; ?>
+
           <?php endwhile; else: ?>
             <?php _e('記事がありません。'); ?>
           <?php endif; ?>

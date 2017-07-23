@@ -24,7 +24,10 @@ get_header(); ?>
 	    <div class="contents_list col-xs-6 col-sm-4 col-md-3">
 	      <figure class="snip1212">
 					<?php if (has_post_thumbnail()) : ?>
-					<?php the_post_thumbnail(array(100,100)); ?>
+					  <?php the_post_thumbnail(array(100,100)); ?>
+          <?php else: ?>
+			      <?php _e('画像がありません。'); ?>            
+          <?php endif; ?>
 	        <figcaption>
 	          <h2><?php echo mb_substr($post->post_title, 0, 12).'...'; ?></h2>
 	          <p>
@@ -41,8 +44,6 @@ get_header(); ?>
 	        <a href="<?php the_permalink(); ?>"></a>
 	      </figure>
 	    </div>
-		<?php else: ?>
-		<?php endif; ?>
 		<?php endwhile; else: ?>
 			<?php _e('記事がありません。'); ?>
 		<?php endif; ?>
