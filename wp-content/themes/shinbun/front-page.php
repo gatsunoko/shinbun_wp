@@ -27,11 +27,11 @@
                 <?php query_posts("cat=2&showposts=1"); ?>
                 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
                   <?php if (has_post_thumbnail()) : ?>
-                  <?php the_post_thumbnail(array(100,100)); ?>
+                    <?php the_post_thumbnail(array(100,100)); ?>
                   <?php else: ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/no_image.png" alt="no image" width="100" height="100">
                   <?php endif; ?>
                 <?php endwhile; else: ?>
-                  <?php _e('画像がありません。'); ?>
                 <?php endif; ?>
               </div>
               <div class="index_single-text col-xs-8 col-sm-8">
@@ -65,8 +65,9 @@
                 <?php query_posts("cat=3&showposts=1"); ?>
                 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
                   <?php if (has_post_thumbnail()) : ?>
-                  <?php the_post_thumbnail(array(100,100)); ?>
+                    <?php the_post_thumbnail(array(100,100)); ?>
                   <?php else: ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/no_image.png" alt="no image" width="100" height="100">
                   <?php endif; ?>
                 <?php endwhile; else: ?>
                   <?php _e('画像がありません。'); ?>
@@ -103,8 +104,9 @@
                 <?php query_posts("cat=5&showposts=1"); ?>
                 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
                   <?php if (has_post_thumbnail()) : ?>
-                  <?php the_post_thumbnail(array(100,100)); ?>
+                    <?php the_post_thumbnail(array(100,100)); ?>
                   <?php else: ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/no_image.png" alt="no image" width="100" height="100">
                   <?php endif; ?>
                 <?php endwhile; else: ?>
                   <?php _e('画像がありません。'); ?>
@@ -141,8 +143,9 @@
                 <?php query_posts("cat=4&showposts=1"); ?>
                 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
                   <?php if (has_post_thumbnail()) : ?>
-                  <?php the_post_thumbnail(array(100,100)); ?>
+                    <?php the_post_thumbnail(array(100,100)); ?>
                   <?php else: ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/no_image.png" alt="no image" width="100" height="100">
                   <?php endif; ?>
                 <?php endwhile; else: ?>
                   <?php _e('画像がありません。'); ?>
@@ -192,7 +195,7 @@
                   <?php if (has_post_thumbnail()) : ?>
                     <?php the_post_thumbnail(); ?>
                   <?php else: ?>
-                    <?php _e('画像がありません。'); ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/no_image.png" alt="no image" width="200" height="200">
                   <?php endif; ?>
                   <figcaption>
                     <h2>

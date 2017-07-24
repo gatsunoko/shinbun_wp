@@ -12,7 +12,7 @@ get_header(); ?>
 <!-- <%# main_contents %> -->
 <div class="main_container category_top_container">
   <div class="breadcrumb_list">
-    <?php breadcrumb(); ?>
+    <?php breadcrumbs(); ?>
   </div>
   <div class="title_area">
     <p class="en_title">magazine</p>
@@ -26,9 +26,9 @@ get_header(); ?>
 	    <div class="contents_list col-xs-6 col-sm-4 col-md-3">
 	      <figure class="snip1212">
 					<?php if (has_post_thumbnail()) : ?>
-					       <?php the_post_thumbnail(array(100,100)); ?>
+		        <?php the_post_thumbnail(array(100,100)); ?>
           <?php else: ?>
-            <?php _e('画像がありません。'); ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/no_image.png" alt="no image" width="100" height="100">
           <?php endif; ?>
 	        <figcaption>
 	          <h2>
@@ -50,7 +50,9 @@ get_header(); ?>
 			<?php _e('記事がありません。'); ?>
 		<?php endif; ?>
   </div>
-  <?php wp_pagenavi(); ?>
+  <div class="pagenation col-xs-12">
+    <?php wp_pagenavi(); ?>
+  </div>
 </div>
 
     <?php get_footer(); ?>

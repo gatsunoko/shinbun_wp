@@ -12,7 +12,7 @@ get_header(); ?>
 <!-- <%# main_contents %> -->
   <div class="main_container event_container_show">
     <div class="breadcrumb_list">
-      <?php breadcrumb(); ?>
+      <?php breadcrumbs(); ?>
     </div>
     <div class="title_area">
       <p class="en_title">shop</p>
@@ -46,7 +46,7 @@ get_header(); ?>
           <?php if (has_post_thumbnail()) : ?>
             <?php the_post_thumbnail(array(100,100)); ?>
           <?php else: ?>
-            <?php _e('画像がありません。'); ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/no_image.png" alt="no image" width="100" height="100">
           <?php endif; ?>
         </div>
       <?php endwhile; else: ?>

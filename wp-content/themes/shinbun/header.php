@@ -3,22 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-    <script type="text/javascript">
-        /* DOMが操作可能になった時に実行 */
-        $(document).ready(function(){
-            $("#mes").html("<p>Hello! Internet!</p>");
-        });
-        /* 上記の省略形 */
-        $(function(){
-            $("#mes").html("<p>Hello! Internet!</p>");
-        });
-    </script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>">
     <!--bootstrap.min.cssの読み込み-->
     <link href="<?php echo get_template_directory_uri(); ?>/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <?php
+    //WordPress自体の読み込みをキャンセル
+    wp_deregister_script( 'jquery' );
+    //バージョンの指定
+    wp_enqueue_script('jquery','http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js');
+    ?>
     <?php wp_head(); ?>
   </head>
 

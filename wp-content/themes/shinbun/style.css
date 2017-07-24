@@ -30,6 +30,10 @@ h1 {
   margin-bottom: 20px;
 }
 
+.breadcrumb_list {
+  margin-top:20px;
+}
+
 .breadcrumb_list *{
   color: rgb(137,125,87);
 }
@@ -512,7 +516,7 @@ figure.snip1212:hover figcaption {
 
 /*magazines_container*/
 .title_area {
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 5px;
 }
 
@@ -526,12 +530,12 @@ figure.snip1212:hover figcaption {
 
 .category_top_container {
   width: 80%;
-  height:1400px;
+  height:1600px;
 }
   @media screen and (max-width: 991px){
     .category_top_container {
       width: 80%;
-      height:2000px;
+      height:2200px;
     }
   }
   @media screen and (max-width: 767px){
@@ -705,4 +709,35 @@ figure.snip1212:hover figcaption {
 
 .link_event a {
   color: rgb(137,125,87);
+}
+
+
+/* pagenation */
+.wp-pagenavi span.pages {
+  border-color: rgb(137,125,87) !important;
+  color: rgb(137,125,87) !important;
+}
+
+.wp-pagenavi a:hover {
+  border-color: rgb(137,125,87) !important;
+}
+
+.wp-pagenavi a {
+  color: gray !important;
+}
+
+.wp-pagenavi span.current {
+  border-color: rgb(137,125,87) !important;
+  color: rgb(137,125,87) !important;
+}
+
+#breadcrumbs ul {
+	width: 100%;
+	font-size: 1.4rem;
+	text-align: left;
+}
+
+#breadcrumbs ul li {
+	display: inline-block;
+	vertical-align: top;
 }
