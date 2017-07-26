@@ -891,11 +891,13 @@ figure.snip1212:hover figcaption {
       height: 165px;
     }
   }
-
-
-
   @media screen and (max-width: 767px){
     .each_container {
       height: 160px;
     }
   }
+
+
+.event_sidebar a {
+  padding-left: 12px;
+}

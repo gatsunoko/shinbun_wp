@@ -51,25 +51,25 @@ get_header(); ?>
         <?php endwhile; else: ?>
           <?php _e('記事がありません。'); ?>
         <?php endif; ?>
+        <div class="link_event col-xs-12">
+          <a href="<?php echo esc_url( get_category_link( get_cat_ID( '地域のイベント' ))) ?>" style="padding-left:3%;">>>>> event</a>
+          <div class="border">
+          </div>
+        </div>
       </div>
       <div class="event_sidebar col-sm-3 col-xs-12">
         <div class="border">
         </div>
         <h3>Archive</h3>
-          <h4>投稿月</h4>
+          <h4>【投稿月】</h4>
           <?php $cat_id = get_cat_id('地域のイベント'); ?>
           <ul><?php wp_get_archives( 'type=monthly&limit=12&cat=' . $cat_id ); ?></ul>
 
-        <h4>カテゴリー</h4>
+        <h4>【カテゴリー】</h4>
         <ul>
           <?php wp_list_categories('title_li='); ?>
         </ul>
       </div>
-    </div>
-    <div class="link_event">
-      <a href="<?php echo esc_url( get_category_link( get_cat_ID( '地域のイベント' ))) ?>" style="padding-left:3%;">>>>> event</a>
-    </div>
-    <div class="border">
     </div>
   </div>
 
