@@ -280,3 +280,12 @@ function get_youngest_tax( $taxes, $mytaxonomy ){
 	}
 	return $youngest;
 }
+
+ //絞り込み検索
+  //から文字検索が正常に動作すれば削除してよい 
+function custom_search($search, $wp_query  ) {
+    //query['s']があったら検索ページ表示
+    if ( isset($wp_query->query['s']) ) $wp_query->is_search = true;
+    return $search;
+}
+add_filter('posts_search','custom_search', 10, 2);

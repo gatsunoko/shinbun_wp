@@ -20,6 +20,21 @@ get_header(); ?>
     <div class="keywords_select">
       <p>□書籍　□本　□チケット　□その他</p>
     </div>
+
+    <form method="get" id="searchform" action="<?php bloginfo('url'); ?>">
+        <label for="s" class="assistive-text">検索</label>
+        <input type="text" name="s" id="s" placeholder="検索" />
+
+        <div>カテゴリ</div>
+    <?php
+    $categories = get_categories();
+    foreach($categories as $category) :
+    ?>
+    <label><input type="checkbox" name="catnum[]" value="<?php echo $category->term_id; ?>"><?php echo $category->name; ?></label><br>
+    <?php endforeach; ?>
+        <input type="submit" value="検索" />
+    </form>
+
   </div>
 
   <div class="col-xs-12 ">
