@@ -17,10 +17,29 @@ get_header(); ?>
     <div class="title_area">
       <p class="en_title">event</p>
       <p class="ja_title">/地域のイベント</p>
-    </div>
-
-    <div class="keywords_select">
-      <p>□お祭り　□教室　□地域　□その他</p>
+      <div class="keywords_select">
+        <form method="get" id="searchform" action="<?php bloginfo('url'); ?>">
+          <div class="free_word_search">
+            <label for="s" class="assistive-text">検索</label>
+            <input claas="search_botton" type="text" name="s" id="s" placeholder="検索" />
+          </div>
+          <?php
+          $cat_id = get_cat_id('地域のイベント');
+          $args = array(
+            'child_of' => $cat_id
+          );
+          $categories = get_categories($args);
+          foreach($categories as $category) :
+          ?>
+            <label class="checker">
+              <input class="check_default" type="checkbox" name="catnum[]" value="<?php echo $category->term_id; ?>">
+                <span class="check"></span>
+                <p><?php echo $category->name; ?></p>
+            </label>
+          <?php endforeach; ?>
+          <input class="search_botton" type="submit" style="color: rgb(137,125,87); margin-left:15px; font-size:16px;" value="検索" />
+        </form>
+      </div>
     </div>
 
     <div class="col-xs-12">

@@ -18,7 +18,26 @@ get_header(); ?>
     <p class="en_title">magazine</p>
     <p class="ja_title">/ミニコミ</p>
     <div class="keywords_select">
-      <p>□歴史　□料理　□雑学　□地元</p>
+      <form method="get" id="searchform" action="<?php bloginfo('url'); ?>">
+        <div class="free_word_search">
+          <input claas="search_area" type="text" name="s" id="s" placeholder="キーワードを入力" />
+        </div>
+        <?php
+        $cat_id = get_cat_id('ミニコミ');
+        $args = array(
+          'child_of' => $cat_id
+        );
+        $categories = get_categories($args);
+        foreach($categories as $category) :
+        ?>
+          <label class="checker">
+            <input class="check_default" type="checkbox" name="catnum[]" value="<?php echo $category->term_id; ?>">
+              <span class="check"></span>
+              <p><?php echo $category->name; ?></p>
+          </label>
+        <?php endforeach; ?>
+        <input class="search_botton" type="submit" style="color: rgb(137,125,87); margin-left:15px; font-size:16px;" value="検索" />
+      </form>
     </div>
   </div>
   <div class="col-xs-12 ">
@@ -28,7 +47,7 @@ get_header(); ?>
 					<?php if (has_post_thumbnail()) : ?>
 		        <?php the_post_thumbnail(array(100,100)); ?>
           <?php else: ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/no_image.png" alt="no image" width="100" height="100">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/no_image200.png" alt="no image" width="100" height="100">
           <?php endif; ?>
 	        <figcaption>
 	          <h2>

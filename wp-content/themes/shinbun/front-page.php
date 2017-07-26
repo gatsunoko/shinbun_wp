@@ -195,7 +195,7 @@
                   <?php if (has_post_thumbnail()) : ?>
                     <?php the_post_thumbnail(); ?>
                   <?php else: ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/no_image.png" alt="no image" width="200" height="200">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/no_image200.png" alt="no image" width="200" height="200">
                   <?php endif; ?>
                   <figcaption>
                     <h2>
