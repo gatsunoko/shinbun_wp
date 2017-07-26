@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <!-- <%# main_contents %> -->
-  <div class="main_container category_top_container">
+  <div class="main_container event_top_container">
     <div class="breadcrumb_list">
       <?php breadcrumbs(); ?>
     </div>

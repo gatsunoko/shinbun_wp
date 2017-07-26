@@ -574,6 +574,26 @@ figure.snip1212:hover figcaption {
     }
   }
 
+.event_top_container {
+  width: 80%;
+  height:2400px;
+}
+
+@media screen and (max-width: 991px){
+  .event_top_container {
+    width: 80%;
+    height:2200px;
+  }
+}
+@media screen and (max-width: 767px){
+  .event_top_container {
+    width: 80%;
+    height:2200px;
+  }
+}
+
+
+
   .page_container {
     width: 80%;
     height:1500px;
