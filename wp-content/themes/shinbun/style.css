@@ -576,19 +576,19 @@ figure.snip1212:hover figcaption {
 
 .event_top_container {
   width: 80%;
-  height:2400px;
+  height:2600px;
 }
 
 @media screen and (max-width: 991px){
   .event_top_container {
     width: 80%;
-    height:2200px;
+    height:2350px;
   }
 }
 @media screen and (max-width: 767px){
   .event_top_container {
     width: 80%;
-    height:2200px;
+    height:2450px;
   }
 }
 
@@ -657,8 +657,15 @@ figure.snip1212:hover figcaption {
 
 .event_text_img, .event_text_img_shop {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
+  @media screen and (max-width: 767px){
+    .event_text_img, .event_text_img_shop {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+
 
 .event_text_img img {
   width: 70%;
@@ -870,3 +877,25 @@ figure.snip1212:hover figcaption {
 .free_word_search {
   margin-bottom: 10px;
 }
+
+.each_container {
+  height: 195px;
+}
+  @media screen and (max-width: 991px){
+    .each_container {
+      height: 180px;
+    }
+  }
+  @media screen and (max-width: 840px){
+    .each_container {
+      height: 165px;
+    }
+  }
+
+
+
+  @media screen and (max-width: 767px){
+    .each_container {
+      height: 160px;
+    }
+  }
