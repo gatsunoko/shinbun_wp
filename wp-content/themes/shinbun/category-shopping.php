@@ -18,23 +18,28 @@ get_header(); ?>
     <p class="en_title">shopping</p>
     <p class="ja_title">/お買い物</p>
     <div class="keywords_select">
-      <p>□書籍　□本　□チケット　□その他</p>
+      <form method="get" id="searchform" action="<?php bloginfo('url'); ?>">
+        <div class="free_word_search">
+          <label for="s" class="assistive-text">検索</label>
+          <input claas="search_botton" type="text" name="s" id="s" placeholder="検索" />
+        </div>
+        <?php
+        $cat_id = get_cat_id('お買い物');
+        $args = array(
+          'child_of' => $cat_id
+        );
+        $categories = get_categories($args);
+        foreach($categories as $category) :
+        ?>
+          <label class="checker">
+            <input class="check_default" type="checkbox" name="catnum[]" value="<?php echo $category->term_id; ?>">
+              <span class="check"></span>
+              <p><?php echo $category->name; ?></p>
+          </label>
+        <?php endforeach; ?>
+        <input class="search_botton" type="submit" style="color: rgb(137,125,87); margin-left:15px; font-size:16px;" value="検索" />
+      </form>
     </div>
-
-    <form method="get" id="searchform" action="<?php bloginfo('url'); ?>">
-        <label for="s" class="assistive-text">検索</label>
-        <input type="text" name="s" id="s" placeholder="検索" />
-
-        <div>カテゴリ</div>
-    <?php
-    $categories = get_categories();
-    foreach($categories as $category) :
-    ?>
-    <label><input type="checkbox" name="catnum[]" value="<?php echo $category->term_id; ?>"><?php echo $category->name; ?></label><br>
-    <?php endforeach; ?>
-        <input type="submit" value="検索" />
-    </form>
-
   </div>
 
   <div class="col-xs-12 ">
