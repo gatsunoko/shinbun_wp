@@ -70,9 +70,9 @@ get_header(); ?>
 		<?php endwhile; else: ?>
 			<?php _e('記事がありません。'); ?>
 		<?php endif; ?>
-  </div>
-  <div class="pagenation col-xs-12">
-    <?php wp_pagenavi(); ?>
+    <div class="pagenation col-xs-12">
+      <?php wp_pagenavi(); ?>
+    </div>
   </div>
 </div>
 

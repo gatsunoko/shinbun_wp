@@ -576,19 +576,19 @@ figure.snip1212:hover figcaption {
 
 .event_top_container {
   width: 80%;
-  height:2600px;
+  height:2800px;
 }
 
 @media screen and (max-width: 991px){
   .event_top_container {
     width: 80%;
-    height:2450px;
+    height:2650px;
   }
 }
 @media screen and (max-width: 767px){
   .event_top_container {
     width: 80%;
-    height:2450px;
+    height:2550px;
   }
 }
 
@@ -771,6 +771,7 @@ figure.snip1212:hover figcaption {
 /* pagenation */
 .wp-pagenavi {
   margin-top: 20px;
+  margin-bottom:30px;
 }
 
 .wp-pagenavi span.pages {

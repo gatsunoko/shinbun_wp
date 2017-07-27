@@ -77,6 +77,9 @@ get_header(); ?>
         <?php endwhile; else: ?>
           <?php _e('記事がありません。'); ?>
         <?php endif; ?>
+        <div class="pagenation col-xs-12">
+          <?php wp_pagenavi(); ?>
+        </div>
       </div>
 
 
@@ -87,9 +90,6 @@ get_header(); ?>
         <?php $cat_id = get_cat_id('地域のイベント'); ?>
         <ul><?php wp_get_archives( 'type=monthly&limit=12&cat=' . $cat_id ); ?></ul>
       </div>
-    </div>
-    <div class="pagenation col-xs-12">
-      <?php wp_pagenavi(); ?>
     </div>
   </div>
 
