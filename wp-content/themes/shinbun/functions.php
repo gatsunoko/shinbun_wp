@@ -196,7 +196,7 @@ function breadcrumbs( $args = array() ){
 		}
 
 		elseif( is_search() ) {
-			$str.='<li>「'. get_search_query() .'」'. $search .'</li>';
+        $str.='<li>「'. get_search_query() .'」'. $search .'</li>';
 		}
 
 		elseif( is_author() ){
@@ -289,3 +289,28 @@ function custom_search($search, $wp_query  ) {
     return $search;
 }
 add_filter('posts_search','custom_search', 10, 2);
+
+
+
+function my_pre_get_posts( $query ) {
+    if ( is_admin() || ! $query -> is_main_query() ) return;
+
+    if ( $query -> is_archive() ) {
+        $query -> set( 'posts_per_page', '12' );
+    }
+}
+add_action( 'pre_get_posts', 'my_pre_get_posts' );
+
+//function.phpに検索ワードが0や未入力のときにもsearch.phpを使うように追記
+function search_template_redirect() {
+  global $wp_query;
+  $wp_query->is_search = true;
+  $wp_query->is_home = false;
+  if (file_exists(TEMPLATEPATH . '/search.php')) {
+    include(TEMPLATEPATH . '/search.php');
+  }
+  exit;
+}
+if (isset($_GET['s']) && $_GET['s'] == false) {
+  add_action('template_redirect', 'search_template_redirect');
+}

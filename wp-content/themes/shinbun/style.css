@@ -559,7 +559,7 @@ figure.snip1212:hover figcaption {
 
 .category_top_container {
   width: 80%;
-  height:1600px;
+  height:1100px;
 }
   @media screen and (max-width: 991px){
     .category_top_container {
@@ -582,7 +582,7 @@ figure.snip1212:hover figcaption {
 @media screen and (max-width: 991px){
   .event_top_container {
     width: 80%;
-    height:2350px;
+    height:2450px;
   }
 }
 @media screen and (max-width: 767px){

@@ -43,7 +43,6 @@ get_header(); ?>
     </div>
 
     <div class="col-xs-12">
-
       <div class="col-sm-9 col-xs-12">
         <div class="border">
         </div>
@@ -94,4 +93,4 @@ get_header(); ?>
     </div>
   </div>
 
-      <?php get_footer(); ?>
+  <?php get_footer(); ?>
